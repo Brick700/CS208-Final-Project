@@ -1,7 +1,29 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+/** Landing Page */
+router.get('/', function(req, res, next){
+  res.render('index', { title: 'Downtown Donuts'});
+});
+
+/** Menu Page */
+router.get('/', function(req, res, next){
+  res.render('menu', { title: 'Menu'});
+});
+
+/** About Us Page */
+router.get('/', function(req, res, next){
+  res.render('about', { title: 'About'});
+});
+
+/** Comment Page */
+router.get('/', function(req, res, next){
+  res.render('comment', { title: 'Customer Comments'});
+});
+
+
+
+
 router.get('/', function(req, res, next){
   try {
     req.db.query('SELECT * FROM todos;', (err, results) => {
