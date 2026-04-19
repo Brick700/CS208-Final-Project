@@ -7,17 +7,17 @@ router.get('/', function(req, res, next){
 });
 
 /** Menu Page */
-router.get('/', function(req, res, next){
+router.get('/menu', function(req, res, next){
   res.render('menu', { title: 'Menu'});
 });
 
 /** About Us Page */
-router.get('/', function(req, res, next){
+router.get('/about', function(req, res, next){
   res.render('about', { title: 'About'});
 });
 
 /** Comment Page */
-router.get('/', function(req, res, next){
+router.get('/comments', function(req, res, next){
   res.render('comment', { title: 'Customer Comments'});
 });
 
