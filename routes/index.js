@@ -8,17 +8,17 @@ router.get('/', function(req, res, next){
 
 /** Menu Page */
 router.get('/menu', function(req, res, next){
-  res.render('menu', { title: 'Menu'});
+  res.render('menu', { title: 'Downtown Donuts'});
 });
 
 /** About Us Page */
 router.get('/about', function(req, res, next){
-  res.render('about', { title: 'About'});
+  res.render('about', { title: 'Downtown Donuts'});
 });
 
 /** Comment Page */
 router.get('/comments', function(req, res, next){
-  res.render('comment', { title: 'Customer Comments'});
+  res.render('comments', { title: 'Downtown Donuts'});
 });
 
 

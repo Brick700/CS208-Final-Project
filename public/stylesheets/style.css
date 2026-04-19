@@ -1,4 +1,29 @@
+
+/* Navigation */
 nav {
-  diplay: flex;
-  flex-direction: row;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
 }
