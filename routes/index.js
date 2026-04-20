@@ -6,6 +6,17 @@ router.get('/', function(req, res, next){
   res.render('index', { title: 'Downtown Donuts'});
 });
 
+/** Terms of Use Page */
+router.get('/terms', function(req, res, next){
+  res.render('terms', { title: 'Downtown Donuts'});
+});
+
+/** Privacy Policy Page */
+router.get('/privacy', function(req, res, next){
+  res.render('privacy', { title: 'Downtown Donuts'});
+});
+
+
 /** Menu Page */
 router.get('/menu', function(req, res, next){
   res.render('menu', { title: 'Downtown Donuts'});
