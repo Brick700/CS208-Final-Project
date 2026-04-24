@@ -122,6 +122,14 @@ footer a {
   color: #F7F7F7;
 }
 
+/* Abous Us */
+.about-us {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #F7F7F7;
+  text-align: center;
+}
+
 /* Legal Notice */
 .legal-info {
   background-color: #F7F7F7;
