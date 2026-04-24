@@ -92,13 +92,12 @@ footer a {
 
 .menu-section {
   text-align: center;
+  color: #F7F7F7;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .menu-section-title{
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-  color: #F7F7F7;
   letter-spacing: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -110,16 +109,12 @@ footer a {
 }
 
 .menu-item {
-  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-  color: #F7F7F7;
   margin-top: 0.7rem;
 }
 
 .item-desc {
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
-  color: #F7F7F7;
 }
 
 /* Abous Us */
@@ -128,6 +123,23 @@ footer a {
   font-size: 1rem;
   color: #F7F7F7;
   text-align: center;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+.about-us p {
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.donut-shop {
+  float: left;
+  width: 40%;
+  border: 2px solid #F7C64A;
+  margin: 2rem;
 }
 
 /* Legal Notice */
