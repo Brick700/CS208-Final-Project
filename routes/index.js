@@ -50,6 +50,14 @@ if (!comment || !comment.trim() === '') {
 
 
 //Max character length
+if (name.trim().length > 100) {
+  return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Name must be under 100 characters long',});
+}
+
+if (comment.trim().length > 1000) {
+  return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Comment must be under 1000 characters long',});
+}
+
 
 
 //Sanitize inputs
