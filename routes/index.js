@@ -31,38 +31,62 @@ router.get('/about', function(req, res, next){
 router.get('/comments', function(req, res, next){
 
   //Pagination
+  const page=parseInt(req.query.page) || 1;
+  const commentLimit = 10;
+  const offset = (page - 1) * commentLimit;
 
+  try {
+    req.db.query('SELECT COUNT(*) AS total FROM comments;', (err, countResult) => {
+      if (err) {
+        console.error('Error counting comments', err);
+        return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'Failed to count comments. Please try again later'});
+      }
 
-  res.render('comments', { title: 'Downtown Donuts'});
+      const totalComments = countResult[0].total;
+      const totalPages = Math.ceil(totalComments / commentLimit);
+
+    req.db.query('SELECT * FROM comments ORDER BY created_at DESC LIMIT ? OFFSET ?;', [commentLimit, offset], (err, comments) => {
+      if (err) {
+        console.error('Error loading comments', err);
+        return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'Failed to load comments. Please try again later',});
+      }
+      console.log('Comments loaded successfully:', comments);
+      res.render('comments', {title: 'Donwtown Donuts', comments: comments, currentPage: page, totalPages: totalPages, error: null});
+    });
+  });
+} catch (error) {
+  console.error('Error loading comments:', error);
+  res.status(500).send('Error loading comments');
+}
 });
 
 router.post('/comments', function(req, res, next){
 const {name, comment } = req.body;
 
 //Reject Empty Fields
-if (!name || !name.trim() === '') {
-  return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'A name is required',});
+if (name || !name.trim() === '') {
+  return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'A name is required', currentPage: 1, totalPages: 1});
 }
 
-if (!comment || !comment.trim() === '') {
-  return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'Comment cannot be blank',});
+if (comment || !comment.trim() === '') {
+  return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'Comment cannot be blank', currentPage: 1, totalPages: 1});
 }
 
 
 //Max character length
 if (name.trim().length > 100) {
-  return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Name must be under 100 characters long',});
+  return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Name must be under 100 characters long', currentPage: 1, totalPages: 1});
 }
 
 if (comment.trim().length > 1000) {
-  return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Comment must be under 1000 characters long',});
+  return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Comment must be under 1000 characters long', currentPage: 1, totalPages: 1});
 }
-
-
 
 //Sanitize inputs
 
+
 //Timestamp
 
+});
 
 module.exports = router;
