@@ -83,10 +83,23 @@ if (comment.trim().length > 1000) {
 }
 
 //Sanitize inputs
-
+const sanitizeName = name.trim().replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const sanitizeComment = comment.trim().replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 //Timestamp
-
+try {
+  req.db.query('INSERT INTO comments (name, comment) VALUES (?, ?);', [sanitizeName, sanitizeComment], (err, results) => {
+    if (err) {
+      console.error('Error adding comment', err);
+      return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'Comment cannot be blank', currentPage: 1, totalPages: 1});
+    }
+    console.log('Successfully added comment', results);
+    res.redirect('/comments');
+  });
+} catch (error) {
+  console.error('Error adding comments:', error);
+  res.status(500).send('Error adding comments');
+}
 });
 
 module.exports = router;
