@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+section {
+  margin: 0;
+  padding: 0;
+}
+
 /* Layout */
 nav {
   display: flex;
@@ -141,6 +146,75 @@ footer a {
   border: 2px solid #F7C64A;
   margin: 2rem;
 }
+
+/* Comment Page */
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  height: 78vh;
+}
+
+.left-side {
+  position: relative;
+  flex-shrink: 0;
+  width: 45%;
+  height: 100%;
+}
+
+.comment-pic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: #143f2a;
+  padding: 2rem;
+  width: 80%;
+  z-index: 1;
+}
+
+.form-title {
+
+}
+
+.comment-form input, 
+.comment-form textarea {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.8rem 0.8rem;
+  border: 1px solid #F7C64A;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: #F7F7F7;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.submit-btn {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+  padding: 0.8rem 0.8rem;
+  border: 1px solid #F7C64A;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
 
 /* Legal Notice */
 .legal-info {

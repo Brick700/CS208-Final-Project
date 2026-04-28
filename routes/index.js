@@ -64,11 +64,11 @@ router.post('/comments', function(req, res, next){
 const {name, comment } = req.body;
 
 //Reject Empty Fields
-if (name || !name.trim() === '') {
+if (!name || !name.trim() === '') {
   return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'A name is required', currentPage: 1, totalPages: 1});
 }
 
-if (comment || !comment.trim() === '') {
+if (!comment || !comment.trim() === '') {
   return res.render('comments', {title: 'Donwtown Donuts', comments: [], error: 'Comment cannot be blank', currentPage: 1, totalPages: 1});
 }
 
