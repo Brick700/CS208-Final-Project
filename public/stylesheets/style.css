@@ -215,6 +215,67 @@ footer a {
   margin-top: 1.5rem;
 }
 
+.right-side {
+  background-color: #F7F7F7;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.comment-board {
+  height: 100%;
+}
+
+.comment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.comment-card {
+
+}
+
+.comment-name {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.comment-text {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.comment-date {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.no-comment {
+  text-align: center;
+  color: #000000;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.comment-pagination {
+  display: flex;
+  justify-content: center
+
+}
+
+.page-btn {
+  font-family: 'Montserrat', sans-serif;
+  color: #F7F7F7;
+  font-size: 0.8rem;
+  background-color: #F7C64A;
+  border: 1px solid #10291D;
+}
+
+.page-btn:hover {
+
+}
+
 
 /* Legal Notice */
 .legal-info {

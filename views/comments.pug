@@ -28,7 +28,7 @@ block content
         div(class='comment-board')
           //Display comments
           if comments && comments.length > 0
-              div(class='comments-list')
+              div(class='comments-grid')
                 each comment in comments
                   div(class='comment-card')
                     p(class='comment-name') #{comment.name}
