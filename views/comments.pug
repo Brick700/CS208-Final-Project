@@ -2,9 +2,9 @@ extends layout
 
 block content
 
-  section
+  main
 
-    div(class='comment-container')
+    section(class='comment-container')
 
       //Left side comment form
       div(class='left-side')
@@ -12,30 +12,31 @@ block content
         div(class='comment-form')
           h2(class='form-title') Share Your Thoughts
           form(action='/comments' method='POST')
+            if error 
+              p #{error}
             //- Name field
-            label Name
+            label(for='name') Name
             input(type='text' id='name' name='name' maxlength='100' placeholder='Your Name' required)
             //- Comment field
-            label Comment
+            label(for='comment') Comment
             textarea(name='comment' id='comment' maxlength='1000' rows='5' placeholder='Please Type Your Comment Here...' required)
             //- Submit button
             button(class='submit-btn' type='submit') Submit Comment
           
 
-
-      //Right side comment board
-      div(class='right-side')
+      section(class='right-side')
         div(class='comment-board')
-          //Display comments
+
+          //- Display comments
           if comments && comments.length > 0
-              div(class='comments-grid')
-                each comment in comments
-                  div(class='comment-card')
-                    p(class='comment-name') #{comment.name}
-                    p(class='comment-date') #{new Date(comment.created_at).toLocaleDateString()}
-                    p(class='comment-text') #{comment.comment}
+            div(class='comments-grid')
+              each comment in comments
+                div(class='comment-card')
+                  p(class='comment-name') #{comment.name}
+                  p(class='comment-date') #{new Date(comment.created_at).toLocaleDateString()}
+                  p(class='comment-text') #{comment.comment}
           else
-              p(class='no-comments') Be the first to comment!
+            p(class='no-comments') Be the first to comment!
 
           //- Pagination
           if totalPages > 1
