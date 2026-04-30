@@ -39,7 +39,7 @@ router.get('/comments', function(req, res, next){
     req.db.query('SELECT COUNT(*) AS total FROM comments;', (err, countResult) => {
       if (err) {
         console.error('Error counting comments', err);
-        return res.render('comments', {title: 'Donwntown Donuts', comments: [], error: 'Failed to count comments. Please try again later'});
+        return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Failed to count comments. Please try again later'});
       }
 
       const totalComments = countResult[0].total;

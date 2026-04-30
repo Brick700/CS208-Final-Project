@@ -22,7 +22,7 @@
         Reload privilege tables now? [Y/n] Y
     3. Run 'sudo service mariadb status' to make sure its running
     4. Run 'sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql' to create inital tables
-    5. Run 'sudo mysql -u root -p -e 'show databases' to check if tables were created
+    5. Run 'sudo mysql -u root -p -e 'show databases;'' to check if tables were created
 4. Run npm start
 
 ## Design Decisions
