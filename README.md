@@ -9,9 +9,9 @@
 
 ## Setup Intructions
 1. Clone the repository
-2. Run 'npm install' to install dependencies
+2. Run "npm install" to install dependencies
 3. Database setup
-    1. Run './setup_scripts/install_db.sh' once per codespace
+    1. Run "./setup_scripts/install_db.sh" once per codespace
     2. Use the following for questions that the script asks:
         Switch to unix_socket authentication [Y/n] n
         Change the root password? [Y/n] Y
@@ -20,9 +20,9 @@
         Disallow root login remotely? [Y/n] Y
         Remove test database and access to it? [Y/n] Y
         Reload privilege tables now? [Y/n] Y
-    3. Run 'sudo service mariadb status' to make sure its running
-    4. Run 'sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql' to create inital tables
-    5. Run 'sudo mysql -u root -p -e 'show databases;'' to check if tables were created
+    3. Run "sudo service mariadb status" to make sure its running
+    4. Run "sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql" to create initial tables
+    5. Run "sudo mysql -u root -p -e 'show databases;'" to check if tables were created
 4. Run npm start
 
 ## Design Decisions
@@ -57,16 +57,28 @@
 
     Another learning experience I had was understanding how mysql handles timestamps. I had a hard time understanding how created_at was being instantiated but I guess mysql does it automatically. As well as creating the timestamp automatically whenver a new row was inserted in the comment table so it didn't need to be manually passed in the query.
 
+    Lastly, I learned how to design a website as mobile friendly using the build in screen that firefox has. Basically had to do everything from scratch and find which layouts would break on a shorter screen. I do want to say thank you for allowing us to use AI in this class. I never realized but they really do provide great sources for you to actually learn how to do things. 
+
 ## Citations
 https://smokymountainpizza.com/
 https://rembrandtseagle.com/
 https://pos.toasttab.com/es-us/blog/on-the-line/how-to-run-a-cafe
 https://about.starbucks.com/stories/2026/inside-starbucks-chicago-cafe-makeover-softer-seating-local-design-invite-customers-to-stay/
 https://www.w3schools.com/HTML/html_entities.asp
+https://www.w3schools.com/css/css3_flexbox.asp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 https://oneuptime.com/blog/post/2026-02-23-how-to-use-the-replace-function-for-string-sanitization/view
+https://pugjs.org/api/getting-started.html
 https://stackoverflow.com/questions/1144783/how-do-i-replace-all-occurrences-of-a-string
+https://stackoverflow.com/questions/3799193/mysql-data-best-way-to-implement-paging
 https://dev.mysql.com/doc/refman/8.0/en/timestamp-initialization.html
+https://www.w3schools.com/sql/sql_where.asp
+https://www.w3schools.com/sql/sql_select.asp
+https://www.w3schools.com/css/css3_pagination.asp
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 https://www.w3schools.com/sql/sql_insert.asp
+https://www.w3schools.com/nodejs/nodejs_intro.asp
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML
 https://github.com/Brick700/12.03-Lab---Full-Stack/blob/master/docs/example_project.md
 https://drive.google.com/file/d/1Cw8CrTLj48oNBUr8jkXxvUJjCJ-sXiSZ/view
+https://www.w3schools.com/CSSref/atrule_media.php
