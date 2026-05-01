@@ -26,7 +26,7 @@
 4. Run npm start
 
 ## Design Decisions
-    Decided to use dark green as the main color pallete for the website. I thought it paired with the gold outlines will make for a high modern feel. Took inpsiration from a lot of cafes around Eagle such as Rembrandts. 
+    Decided to use dark green as the main color palette for the website. I thought it paired with the gold outlines will make for a high modern feel. Took inpsiration from a lot of cafes around Eagle such as Rembrandts. 
 
     I wanted to add a slide show of the comments to the home page but it turned out to be more difficult than I thought it would be. The comment page was the hardest by far. spent a lot of time just braindstorming how it would look like. It was a bit difficult because I wanted to keep the theme going with the green background but the comments would be too hard to see. So I decided to put a picture in the background with made it easier too see and blended well with the cafe theme. 
 
@@ -40,7 +40,7 @@
 ## Edge Cases
     1. If the server/API are unreachable, then it is caught in the try/catch block and outputs the error: "Failed to load comments. Please try again later."
 
-    2. Both the name and comment field are validated server-side using trim(). if a user inputs whitespace as the name or comment, then trim() will return an empty string and the server will return a message saying "A name is required or Comment cannot be blank"
+    2. Both the name and comment field are validated server-side using trim(). if a user inputs whitespace as the name or comment, then trim() will return an empty string and the server will return a message saying "A name is required" or "Comment cannot be blank"
 
     3. The server enforces a maximum character length of 100 for the name and 1000 characters for the comment. If the user exceeds these, then the server will return a message saying "Name must be under 100 characters long" or "Comment must be under 1000 characters long"
 
