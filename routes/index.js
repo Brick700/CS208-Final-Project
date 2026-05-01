@@ -69,7 +69,7 @@ if (!name || name.trim() === '') {
 }
 
 if (!comment || comment.trim() === '') {
-  return res.render('comments', {title: 'Donwntown Donuts', comments: [], error: 'Comment cannot be blank', currentPage: 1, totalPages: 1});
+  return res.render('comments', {title: 'Downtown Donuts', comments: [], error: 'Comment cannot be blank', currentPage: 1, totalPages: 1});
 }
 
 

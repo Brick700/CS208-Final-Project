@@ -63,7 +63,6 @@
 https://smokymountainpizza.com/
 https://rembrandtseagle.com/
 https://pos.toasttab.com/es-us/blog/on-the-line/how-to-run-a-cafe
-https://about.starbucks.com/stories/2026/inside-starbucks-chicago-cafe-makeover-softer-seating-local-design-invite-customers-to-stay/
 https://www.w3schools.com/HTML/html_entities.asp
 https://www.w3schools.com/css/css3_flexbox.asp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString

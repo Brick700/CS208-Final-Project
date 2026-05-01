@@ -75,7 +75,7 @@ footer a {
 .online-order {
   display: flex;
   justify-content: flex-start;
-  align-items: lef;
+  align-items: left;
   padding: 1rem 4rem;
   gap: 1rem;
   margin-left: 5rem;
@@ -257,15 +257,13 @@ footer a {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5rem;
   overflow-wrap: break-word;
-
 }
 
-.no-comment {
+.no-comments {
   text-align: center;
-  color: #000000;
+  color: #F7F7F7;
   font-size: 0.9rem;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .comment-pagination {
@@ -333,15 +331,11 @@ footer a {
   }
 
   .order-btn {
-      margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
 
   .menu-divider {
-      margin: 1.5rem 2rem;
-  }
-
-  .about-us p {
-      margin: 0.5rem;
+    margin: 1.5rem 2rem;
   }
 
   .comment-container {
