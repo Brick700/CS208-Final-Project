@@ -20,8 +20,9 @@ This is my full stack Downtown Donuts website. It uses Node.js and pug with mySQ
         Remove test database and access to it? [Y/n] Y
         Reload privilege tables now? [Y/n] Y
     3. Run "sudo service mariadb status" to make sure its running
-    4. Run "sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql" to create initial tables
-    5. Run "sudo mysql -u root -p -e 'show databases;'" to check if tables were created
+           If already installed MariaDB, then run "sudo service mariadb start"
+    5. Run "sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql" to create initial tables
+    6. Run "sudo mysql -u root -p -e 'show databases;'" to check if tables were created
 4. Run npm start
 
 ## Design Decisions
