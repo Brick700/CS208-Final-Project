@@ -1,11 +1,10 @@
 # CS208 Full Stack Final Project
 
-## Documentation
 
-- Running the example project is documented [here](docs/example_project.md)
-- An example README is provided [here](docs/README_example.md)
 
-# Downtown Donuts Website Project
+## Project Description
+
+This is my full stack Downtown Donuts website. It uses Node.js and pug with mySQL database for the comment system. Please follow the setup guide below.
 
 ## Setup Intructions
 1. Clone the repository
